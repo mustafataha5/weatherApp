@@ -27,7 +27,8 @@ The Weather App delivers a seamless experience for accessing and managing weathe
 ## ✨ Features
 
 - **Real-Time Weather Search**: Retrieve up-to-date weather data for any city via the OpenWeather API.
-- **Location Management**: Save, view, and remove favorite locations stored in MongoDB.
+- **Location Management**: Save, view, edit, and remove favorite locations stored in MongoDB.
+- **Weather Forecast**: Display weather forecasts for selected cities.
 - **Responsive Interface**: A clean, intuitive UI built with Material-UI, optimized for desktop and mobile devices.
 - **Full-Stack Integration**: Efficient communication between the React frontend and Node.js/Express backend.
 - **Scalable Design**: Modular codebase to support maintenance and future enhancements.
@@ -106,29 +107,33 @@ The frontend will be accessible at `http://localhost:3000`.
 ## 📖 Usage
 
 1. Open your browser and navigate to `http://localhost:3000`.
-2. Enter a city name in the search bar to fetch current weather data.
+2. Enter a city name in the search bar to fetch current weather data or forecasts.
 3. Save favorite locations to MongoDB for quick access.
-4. Manage saved locations (view or delete) through the intuitive interface.
+4. Manage saved locations (view, edit, or delete) through the intuitive interface.
+5. View weather history for previously searched locations.
 
 ---
 
 ## 🎥 Demo
 
-Explore the app’s functionality through the following screenshots, showcasing key features of the Weather App. For a full walkthrough, watch the demo video: [Watch the Demo](https://your-video-link.com).
+Explore the app’s functionality through the following screenshot gallery, showcasing key features of the Weather App. For a full walkthrough, watch the demo video: [Watch the Demo](https://your-video-link.com).
 
 ### Screenshot Gallery
-| **Home Page** | **Weather Search** | **Saved Locations** | **History** |
-|---------------|--------------------|---------------------|-------------|
-| ![Home Page](imgs/home.png) | ![Weather Search](imgs/Screenshot%20from%202025-08-25%2009-07-54.png) | ![Saved Locations](imgs/locations_1.png) | ![History](imgs/history_1.png) |
+| **Home Page** | **Weather Forecast** | **Saved Locations** | **Edit Location** |
+|---------------|---------------------|---------------------|-------------------|
+| ![Home Page](imgs/home.png) | ![Weather Forecast](imgs/forecast_.png) | ![Saved Locations](imgs/locations_1.png) | ![Edit Location](imgs/Edit_location_1.png) |
+
+| **Search History** | **Smart History** | **Smart Feature 1** | **Smart Feature 2** |
+|--------------------|-------------------|---------------------|---------------------|
+| ![Search History](imgs/history_1.png) | ![Smart History](imgs/smart_history_1.png) | ![Smart Feature 1](imgs/smart_1.png) | ![Smart Feature 2](imgs/smart_2.png) |
 
 #### Additional Screenshots
+- **Edit Location (Alternate View)**: ![Edit Location 2](imgs/Edit_location_2.png)
 - **Smart Features**:
-  - ![Smart Feature 1](imgs/smart_1.png)
-  - ![Smart Feature 2](imgs/smart_2.png)
   - ![Smart Feature 3](imgs/smart_3.png)
   - ![Smart Feature 4](imgs/smart_4.png)
 
-> **Note**: Ensure the `imgs/` directory is placed in the root of the repository for the images to render correctly on GitHub.
+> **Note**: Ensure the `imgs/` directory is placed in the root of the repository for the images to render correctly on GitHub. Optimize large images (e.g., `smart_2.png`) to improve load times.
 
 ---
 
