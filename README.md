@@ -20,7 +20,7 @@ A modern, full-stack weather application powered by **React** (frontend) and **N
 
 ## Project Overview
 
-The Weather App is designed to provide a seamless user experience for accessing and managing weather information. With a modular architecture, it integrates a React-based frontend with a Node.js/Express backend, leveraging MongoDB for persistent storage and the OpenWeather API for real-time weather data. The project showcases best practices in full-stack development, including secure API integration and responsive design.
+The Weather App delivers a seamless experience for accessing and managing weather information. Built with a modular architecture, it integrates a React-based frontend with a Node.js/Express backend, leveraging MongoDB for persistent storage and the OpenWeather API for real-time weather data. The project adheres to full-stack development best practices, ensuring secure API integration, responsive design, and scalability.
 
 ---
 
@@ -30,7 +30,7 @@ The Weather App is designed to provide a seamless user experience for accessing 
 - **Location Management**: Save, view, and remove favorite locations stored in MongoDB.
 - **Responsive Interface**: A clean, intuitive UI built with Material-UI, optimized for desktop and mobile devices.
 - **Full-Stack Integration**: Efficient communication between the React frontend and Node.js/Express backend.
-- **Scalable Design**: Modular codebase to facilitate maintenance and future feature additions.
+- **Scalable Design**: Modular codebase to support maintenance and future enhancements.
 
 ---
 
@@ -105,17 +105,30 @@ The frontend will be accessible at `http://localhost:3000`.
 
 ## 📖 Usage
 
-1. Open your browser and go to `http://localhost:3000`.
+1. Open your browser and navigate to `http://localhost:3000`.
 2. Enter a city name in the search bar to fetch current weather data.
-3. Save favorite locations to MongoDB for quick access later.
+3. Save favorite locations to MongoDB for quick access.
 4. Manage saved locations (view or delete) through the intuitive interface.
 
 ---
 
 ## 🎥 Demo
 
-Explore the app’s functionality with this short demo video:  
-[Watch the Demo](https://your-video-link.com)
+Explore the app’s functionality through the following screenshots, showcasing key features of the Weather App. For a full walkthrough, watch the demo video: [Watch the Demo](https://your-video-link.com).
+
+### Screenshot Gallery
+| **Home Page** | **Weather Search** | **Saved Locations** | **History** |
+|---------------|--------------------|---------------------|-------------|
+| ![Home Page](imgs/home.png) | ![Weather Search](imgs/Screenshot%20from%202025-08-25%2009-07-54.png) | ![Saved Locations](imgs/locations_1.png) | ![History](imgs/history_1.png) |
+
+#### Additional Screenshots
+- **Smart Features**:
+  - ![Smart Feature 1](imgs/smart_1.png)
+  - ![Smart Feature 2](imgs/smart_2.png)
+  - ![Smart Feature 3](imgs/smart_3.png)
+  - ![Smart Feature 4](imgs/smart_4.png)
+
+> **Note**: Ensure the `imgs/` directory is placed in the root of the repository for the images to render correctly on GitHub.
 
 ---
 
