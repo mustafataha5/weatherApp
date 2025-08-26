@@ -1,48 +1,35 @@
-const dotenv = require("dotenv");
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 
-// Load environment variables
 dotenv.config();
-
-// Connect to MongoDB
 connectDB();
 
-// Initialize Express app
 const app = express();
 
-// CORS configuration
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://weatherapp-e2by.onrender.com",
+  "http://127.0.0.1:3000",
+  "http://ec2-63-178-229-181.eu-central-1.compute.amazonaws.com", // AWS or Render frontend URL
+  ""
 ];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+app.use(cors({
+  origin: allowedOrigins,
   credentials: true,
-};
+}));
 
-app.use(cors(corsOptions));
-
-// Middleware
 app.use(express.json());
 
 // Routes
-app.use("/api/weather", require("./routes/WeatherRoute"));
+app.use("/api/weather", require("./routes/WeatherRoute")); // FIXED
 app.use("/api/locations", require("./routes/locationRoute"));
 
-// Serve React frontend in production
+// Serve frontend in production
 if (process.env.NODE_ENV === "production") {
-  const clientBuildPath = path.join(__dirname, "../client/build");
+  const clientBuildPath = path.join(__dirname, "../client/dist");
   app.use(express.static(clientBuildPath));
 
   app.get("*", (req, res) => {
@@ -50,11 +37,5 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// Root route (for testing API in dev)
-app.get("/api", (req, res) => {
-  res.send("Weather App API is running ✅");
-});
-
-// Server setup
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
