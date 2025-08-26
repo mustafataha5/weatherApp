@@ -1,18 +1,28 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/locations";
+// Use environment variable for API base URL (Vite syntax)
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL_LOCATIONS || "http://localhost:5000/api/locations";
+
+// Axios instance
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  // Uncomment if backend uses cookies/sessions
+  // withCredentials: true,
+});
+
+// -------------------- Location Endpoints -------------------- //
 
 // Get all locations
-export const getLocations = () => axios.get(API_URL);
+export const getLocations = () => api.get("/");
 
-// Get location by ID
-export const getLocation = (id) => axios.get(`${API_URL}/${id}`);
+// Get a single location by ID
+export const getLocation = (id) => api.get(`/${id}`);
 
-// Create new location
-export const createLocation = (data) => axios.post(API_URL, data);
+// Create a new location
+export const createLocation = (data) => api.post("/", data);
 
-// Update location
-export const updateLocation = (id, data) => axios.patch(`${API_URL}/${id}`, data);
+// Update location by ID
+export const updateLocation = (id, data) => api.patch(`/${id}`, data);
 
-// Delete location
-export const deleteLocation = (id) => axios.delete(`${API_URL}/${id}`);
+// Delete location by ID
+export const deleteLocation = (id) => api.delete(`/${id}`);
