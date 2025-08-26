@@ -13,7 +13,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://127.0.0.1:3000",
   "http://ec2-63-178-229-181.eu-central-1.compute.amazonaws.com", // AWS or Render frontend URL
-  ""
+  "http://63.178.229.181",
 ];
 
 app.use(cors({
