@@ -9,10 +9,11 @@ connectDB();
 
 const app = express();
 
+// CORS
 const allowedOrigins = [
   "http://localhost:3000",
   "http://127.0.0.1:3000",
-  "http://ec2-63-178-229-181.eu-central-1.compute.amazonaws.com", // AWS or Render frontend URL
+  "http://ec2-63-178-229-181.eu-central-1.compute.amazonaws.com",
   "http://63.178.229.181",
 ];
 
@@ -23,11 +24,11 @@ app.use(cors({
 
 app.use(express.json());
 
-// Routes
-app.use("/api/weather", require("./routes/WeatherRoute")); // FIXED
+// ✅ Routes
+app.use("/api/weather", require("./routes/WeatherRoute"));
 app.use("/api/locations", require("./routes/locationRoute"));
 
-// Serve frontend in production
+// Serve frontend (Vite build) in production
 if (process.env.NODE_ENV === "production") {
   const clientBuildPath = path.join(__dirname, "../client/dist");
   app.use(express.static(clientBuildPath));
