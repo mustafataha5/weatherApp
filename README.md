@@ -75,8 +75,10 @@ npm install
 #### Configure Environment Variables
 Create a `.env` file in the `server/` directory using `.env.example` as a template. Example content:
 ```
-MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority
-WEATHER_API_KEY=your_openweather_api_key
+MONGODB_USER=your_mongodb_user
+MONGODB_PASSWORD=your_mongodb_password
+DATABASE_NAME=your_database_name
+WEATHER_API_KEY=your_openweathermap_api_key
 PORT=5000
 ```
 > **Security Note**: Add `.env` to `.gitignore` to prevent exposing sensitive information (e.g., API keys, database credentials).
